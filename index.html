@@ -40,100 +40,112 @@
             color: white;
             width: 100%;
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 3.5rem 1rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 3.5rem;
+            font-size: 2.2rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
         }
 
         header p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             opacity: 0.95;
-            margin-top: 15px;
+            margin-top: 10px;
             font-style: italic;
         }
 
         .container {
-            max-width: 800px;
-            width: 90%;
-            padding: 2rem 0;
+            max-width: 450px;
+            width: 92%;
+            padding: 1rem 0;
             text-align: center;
         }
 
         .card {
             background: white;
-            padding: 2.5rem;
+            padding: 1.8rem;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin: 2rem 0;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
+            margin: 1.5rem 0;
+            box-sizing: border-box;
         }
 
         .photo-frame {
-            border: 15px solid white;
-            border-bottom: 50px solid white;
+            border: 10px solid white;
+            border-bottom: 35px solid white;
             border-radius: 4px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
             display: inline-block;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             background: #fff;
             max-width: 100%;
+            box-sizing: border-box;
         }
 
         .photo-placeholder {
-            width: 400px;
-            height: 300px;
+            width: 280px;
+            height: 240px;
             max-width: 100%;
             background: linear-gradient(45deg, #ffe0e3, #fff0f2);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: var(--primary-pink);
             border: 2px dashed var(--secondary-pink);
+        }
+
+        .mom-icon {
+            width: 100px;
+            height: 100px;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
         }
 
         .generator-box {
             background: #fff9fa;
             border: 2px dashed var(--secondary-pink);
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 15px;
-            margin: 1.5rem 0;
+            margin: 1.2rem 0;
         }
 
         #complimentText {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: var(--primary-pink);
-            min-height: 2rem;
-            margin: 1rem 0;
+            min-height: 2.5rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn {
             background-color: var(--primary-pink);
             color: white;
             border: none;
-            padding: 14px 28px;
-            font-size: 1.1rem;
+            padding: 12px 24px;
+            font-size: 1rem;
             font-weight: bold;
             border-radius: 30px;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3);
+            width: 100%;
+            max-width: 280px;
+            box-sizing: border-box;
             transition: all 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .btn:hover {
-            background-color: #e0586d;
-            transform: scale(1.03);
-            box-shadow: 0 7px 20px rgba(255, 107, 129, 0.4);
+        .btn:active {
+            transform: scale(0.98);
         }
 
         .btn-secondary {
@@ -142,26 +154,22 @@
             padding: 10px 20px;
         }
 
-        .btn-secondary:hover {
-            background-color: #000;
-        }
-
         .letter-box {
             display: none;
             background: #fffdf6;
-            border-left: 6px solid var(--primary-pink);
-            padding: 2.5rem;
-            margin-top: 2rem;
-            border-radius: 4px 20px 20px 4px;
+            border-left: 5px solid var(--primary-pink);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 4px 15px 15px 4px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             text-align: left;
-            line-height: 1.8;
-            font-size: 1.15rem;
+            line-height: 1.7;
+            font-size: 1rem;
         }
 
         footer {
-            margin: 3rem 0;
-            font-size: 0.95rem;
+            margin: 2.5rem 0;
+            font-size: 0.85rem;
             color: #a4b0be;
         }
     </style>
@@ -179,24 +187,31 @@
         
         <div class="card">
             <div class="photo-frame">
-                <div class="photo-placeholder">👩‍👦✨</div>
+                <div class="photo-placeholder">
+                    <svg class="mom-icon" viewBox="0 0 64 64" fill="none" xmlns="http://w3.org">
+                        <circle cx="32" cy="32" r="32" fill="#FFE3E7"/>
+                        <path d="M32 48.75C32 48.75 14.5 38.25 14.5 25.5C14.5 17.5 21 14 26.25 14C29.5 14 31.25 15.75 32 16.75C32.75 15.75 34.5 14 37.75 14C43 14 49.5 17.5 49.5 25.5C49.5 38.25 32 48.75 32 48.75Z" fill="#FF6B81"/>
+                        <path d="M32 42.5C32 42.5 19.5 35 19.5 25.5C19.5 19.5 24 17 27.5 17C29.75 17 31 18.25 32 19.25C33 18.25 34.25 17 36.5 17C40 17 44.5 19.5 44.5 25.5C44.5 35 32 42.5 32 42.5Z" fill="#FF8DA1"/>
+                        <circle cx="32" cy="27" r="4" fill="#FFFFFF"/>
+                    </svg>
+                </div>
             </div>
             <h2>To the Best Mom in the Entire Universe</h2>
-            <p>Thank you for always being my rock, my guide, and my biggest inspiration. Here is a little interactive page to remind you how special you are.</p>
+            <p style="font-size: 0.95rem; line-height: 1.5;">Thank you for always being my rock, my guide, and my biggest inspiration. Here is a little interactive page to remind you how special you are.</p>
         </div>
 
         <div class="card">
-            <h2>✨ The Mom Appreciation Machine ✨</h2>
-            <p>Click the button below to see just a few reasons why I appreciate you!</p>
+            <h2>✨ Mom Appreciation Machine ✨</h2>
+            <p style="font-size: 0.95rem;">Tap below to see why I appreciate you!</p>
             <div class="generator-box">
-                <div id="complimentText">Click the button below to start! 👇</div>
+                <div id="complimentText">Tap the button below! 👇</div>
             </div>
             <button class="btn btn-secondary" onclick="generateCompliment()">Generate Reason 💖</button>
         </div>
 
         <div class="card" style="box-shadow: 0 10px 30px rgba(255, 107, 129, 0.15);">
             <h2>✉️ A Message From My Heart</h2>
-            <p>I wrote a private letter just for you. Click below to unwrap it.</p>
+            <p style="font-size: 0.95rem;">I wrote a private letter just for you. Tap below to unwrap it.</p>
             <button class="btn" onclick="toggleLetter()">Open Your Letter 🎁</button>
             
             <div id="secretLetter" class="letter-box">
@@ -211,7 +226,7 @@
     </div>
 
     <footer>
-        Hand-coded with love on GitHub Pages • 2026
+        Hand-coded with love • 2026
     </footer>
 
     <script>
@@ -256,9 +271,9 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height - canvas.height;
-                this.size = Math.random() * 8 + 5;
-                this.speed = Math.random() * 1.5 + 0.5;
-                this.opacity = Math.random() * 0.5 + 0.2;
+                this.size = Math.random() * 6 + 4;
+                this.speed = Math.random() * 1.2 + 0.4;
+                this.opacity = Math.random() * 0.4 + 0.2;
             }
 
             draw() {
@@ -268,9 +283,6 @@
                 ctx.beginPath();
                 ctx.moveTo(this.x, this.y);
                 ctx.bezierCurveTo(this.x - this.size / 2, this.y - this.size / 2, this.x - this.size, this.y + this.size / 3, this.x, this.y + this.size);
-                ctx.bezierCurveTo(this.x + this.size, this.y + this.size / 3, this.x + this.size / 2, this.y - this.size / 2, this.x, this.y);
-                ctx.fill();
-                ctx.restore();
             }
 
             update() {
@@ -283,7 +295,7 @@
         }
 
         function initHearts() {
-            for (let i = 0; i < 35; i++) {
+            for (let i = 0; i < 25; i++) {
                 hearts.push(new Heart());
             }
         }
