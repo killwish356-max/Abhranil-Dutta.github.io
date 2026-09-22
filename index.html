@@ -5,312 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To My Amazing Mom ❤️</title>
     <style>
-        :root {
-            --primary-pink: #ff6b81;
-            --secondary-pink: #ffa5b0;
-            --text-dark: #2d3436;
-            --bg-light: #fff5f6;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        #heartCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
-            color: white;
-            width: 100%;
-            text-align: center;
-            padding: 3.5rem 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        .container {
-            max-width: 450px;
-            width: 92%;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .card {
-            background: white;
-            padding: 1.8rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin: 1.5rem 0;
-            box-sizing: border-box;
-        }
-
-        .photo-frame {
-            border: 10px solid white;
-            border-bottom: 35px solid white;
-            border-radius: 4px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            display: inline-block;
-            margin-bottom: 1rem;
-            background: #fff;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .photo-placeholder {
-            width: 280px;
-            height: 240px;
-            max-width: 100%;
-            background: linear-gradient(45deg, #ffe0e3, #fff0f2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed var(--secondary-pink);
-        }
-
-        .mom-icon {
-            width: 100px;
-            height: 100px;
-            animation: pulse 2s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-            100% { transform: scale(1); }
-        }
-
-        .generator-box {
-            background: #fff9fa;
-            border: 2px dashed var(--secondary-pink);
-            padding: 1.2rem;
-            border-radius: 15px;
-            margin: 1.2rem 0;
-        }
-
-        #complimentText {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--primary-pink);
-            min-height: 2.5rem;
-            margin: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn {
-            background-color: var(--primary-pink);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3);
-            width: 100%;
-            max-width: 280px;
-            box-sizing: border-box;
-            transition: all 0.2s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-        }
-
-        .btn-secondary {
-            background-color: #2d3436;
-            font-size: 0.9rem;
-            padding: 10px 20px;
-        }
-
-        .letter-box {
-            display: none;
-            background: #fffdf6;
-            border-left: 5px solid var(--primary-pink);
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-            border-radius: 4px 15px 15px 4px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            text-align: left;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        footer {
-            margin: 2.5rem 0;
-            font-size: 0.85rem;
-            color: #a4b0be;
-        }
+        :root { --primary-pink: #ff6b81; --secondary-pink: #ffa5b0; --text-dark: #2d3436; --bg-light: #fff5f6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-light); color: var(--text-dark); margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; position: relative; }
+        #heartCanvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; }
+        header { background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink)); color: white; width: 100%; text-align: center; padding: 3.5rem 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); box-sizing: border-box; }
+        header h1 { margin: 0; font-size: 2.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.15); }
+        header p { font-size: 1.1rem; opacity: 0.95; margin-top: 10px; font-style: italic; }
+        .container { max-width: 450px; width: 92%; padding: 1rem 0; text-align: center; }
+        .card { background: white; padding: 1.8rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 1.5rem 0; box-sizing: border-box; }
+        .photo-frame { border: 10px solid white; border-bottom: 35px solid white; border-radius: 4px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); display: inline-block; margin-bottom: 1rem; background: #fff; max-width: 100%; box-sizing: border-box; }
+        .photo-placeholder { width: 280px; height: 240px; max-width: 100%; background: linear-gradient(45deg, #ffe0e3, #fff0f2); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--secondary-pink); box-sizing: border-box; }
+        .mom-icon { width: 100px; height: 100px; animation: pulse 2s infinite ease-in-out; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
+        .generator-box { background: #fff9fa; border: 2px dashed var(--secondary-pink); padding: 1.2rem; border-radius: 15px; margin: 1.2rem 0; }
+        #complimentText { font-size: 1.1rem; font-weight: bold; color: var(--primary-pink); min-height: 2.5rem; margin: 0.5rem 0; display: flex; align-items: center; justify-content: center; }
+        .btn { background-color: var(--primary-pink); color: white; border: none; padding: 12px 24px; font-size: 1rem; font-weight: bold; border-radius: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3); width: 100%; max-width: 280px; box-sizing: border-box; transition: all 0.2s ease; -webkit-tap-highlight-color: transparent; }
+        .btn:active { transform: scale(0.98); }
+        .btn-secondary { background-color: #2d3436; font-size: 0.9rem; padding: 10px 20px; }
+        .letter-box { display: none; background: #fffdf6; border-left: 5px solid var(--primary-pink); padding: 1.5rem; margin-top: 1.5rem; border-radius: 4px 15px 15px 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; line-height: 1.7; font-size: 1rem; }
+        footer { margin: 2.5rem 0; font-size: 0.85rem; color: #a4b0be; }
     </style>
 </head>
 <body>
-
-    <canvas id="heartCanvas"></canvas>
-
-    <header>
-        <h1>To the Best Mom Ever! ❤️</h1>
-        <p>A custom digital space crafted just for you.</p>
-    </header>
-
+    <canvas id="heartCanvas" aria-hidden="true"></canvas>
+    <header><h1>To the Best Mom Ever! ❤️</h1><p>A custom digital space crafted just for you.</p></header>
     <div class="container">
-        
         <div class="card">
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <svg class="mom-icon" viewBox="0 0 64 64" fill="none" xmlns="http://w3.org">
-                        <circle cx="32" cy="32" r="32" fill="#FFE3E7"/>
-                        <path d="M32 48.75C32 48.75 14.5 38.25 14.5 25.5C14.5 17.5 21 14 26.25 14C29.5 14 31.25 15.75 32 16.75C32.75 15.75 34.5 14 37.75 14C43 14 49.5 17.5 49.5 25.5C49.5 38.25 32 48.75 32 48.75Z" fill="#FF6B81"/>
-                        <path d="M32 42.5C32 42.5 19.5 35 19.5 25.5C19.5 19.5 24 17 27.5 17C29.75 17 31 18.25 32 19.25C33 18.25 34.25 17 36.5 17C40 17 44.5 19.5 44.5 25.5C44.5 35 32 42.5 32 42.5Z" fill="#FF8DA1"/>
-                        <circle cx="32" cy="27" r="4" fill="#FFFFFF"/>
-                    </svg>
-                </div>
-            </div>
+            <div class="photo-frame"><div class="photo-placeholder">
+                <svg class="mom-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Heart icon">
+                    <circle cx="32" cy="32" r="32" fill="#FFE3E7"/>
+                    <path d="M32 48.75C32 48.75 14.5 38.25 14.5 25.5C14.5 17.5 21 14 26.25 14C29.5 14 31.25 15.75 32 16.75C32.75 15.75 34.5 14 37.75 14C43 14 49.5 17.5 49.5 25.5C49.5 38.25 32 48.75 32 48.75Z" fill="#FF6B81"/>
+                    <path d="M32 42.5C32 42.5 19.5 35 19.5 25.5C19.5 19.5 24 17 27.5 17C29.75 17 31 18.25 32 19.25C33 18.25 34.25 17 36.5 17C40 17 44.5 19.5 44.5 25.5C44.5 35 32 42.5 32 42.5Z" fill="#FFA5B0"/>
+                    <circle cx="32" cy="27" r="4" fill="#FFFFFF"/>
+                </svg>
+            </div></div>
             <h2>To the Best Mom in the Entire Universe</h2>
             <p style="font-size: 0.95rem; line-height: 1.5;">Thank you for always being my rock, my guide, and my biggest inspiration. Here is a little interactive page to remind you how special you are.</p>
         </div>
-
-        <div class="card">
-            <h2>✨ Mom Appreciation Machine ✨</h2>
-            <p style="font-size: 0.95rem;">Tap below to see why I appreciate you!</p>
-            <div class="generator-box">
-                <div id="complimentText">Tap the button below! 👇</div>
-            </div>
-            <button class="btn btn-secondary" onclick="generateCompliment()">Generate Reason 💖</button>
-        </div>
-
-        <div class="card" style="box-shadow: 0 10px 30px rgba(255, 107, 129, 0.15);">
-            <h2>✉️ A Message From My Heart</h2>
-            <p style="font-size: 0.95rem;">I wrote a private letter just for you. Tap below to unwrap it.</p>
-            <button class="btn" onclick="toggleLetter()">Open Your Letter 🎁</button>
-            
-            <div id="secretLetter" class="letter-box">
-                <p>Dear Mom,</p>
-                <p>I wanted to build something completely unique to show you how much you mean to me. While I can build code and websites, no language or logic could ever truly measure up to the incredible love, patience, and dedication you have poured into my life.</p>
-                <p>Thank you for celebrating my wins, comforting my losses, and showing me how to treat the world with kindness. I am incredibly lucky to have you as my mother.</p>
-                <p>I love you infinitely!</p>
-                <p>Love always,<br><strong>Abhranil</strong></p>
-            </div>
-        </div>
-
+        <div class="card"><h2>✨ Mom Appreciation Machine ✨</h2><p style="font-size: 0.95rem;">Tap below to see why I appreciate you!</p><div class="generator-box"><div id="complimentText">Tap the button below! 👇</div></div><button class="btn btn-secondary" type="button" onclick="generateCompliment()">Generate Reason 💖</button></div>
+        <div class="card" style="box-shadow: 0 10px 30px rgba(255, 107, 129, 0.15);"><h2>✉️ A Message From My Heart</h2><p style="font-size: 0.95rem;">I wrote a private letter just for you. Tap below to unwrap it.</p><button class="btn" type="button" onclick="toggleLetter()">Open Your Letter 🎁</button><div id="secretLetter" class="letter-box"><p>Dear Mom,</p><p>I wanted to build something completely unique to show you how much you mean to me. While I can build code and websites, no language or logic could ever truly measure up to the love and support you give me.</p><p>Thank you for celebrating my wins, comforting my losses, and showing me how to treat the world with kindness. I am incredibly lucky to have you as my mother.</p><p>I love you infinitely!</p><p>Love always,<br><strong>Abhranil</strong></p></div></div>
     </div>
-
-    <footer>
-        Hand-coded with love • 2026
-    </footer>
-
+    <footer>Hand-coded with love • 2026</footer>
     <script>
-        const compliments = [
-            "Your endless patience makes me a better person every single day.",
-            "You give the absolute best hugs that make all my worries melt away.",
-            "Your strength and resilience teach me to never give up on my dreams.",
-            "You have the unique power to make our home feel like the safest place in the world.",
-            "Your kindness inspires everyone around you.",
-            "You always know exactly what to say when I need advice or reassurance."
-        ];
-
-        function generateCompliment() {
-            const display = document.getElementById("complimentText");
-            const randomIndex = Math.floor(Math.random() * compliments.length);
-            display.innerText = compliments[randomIndex];
-        }
-
-        function toggleLetter() {
-            const letter = document.getElementById("secretLetter");
-            if (letter.style.display === "block") {
-                letter.style.display = "none";
-            } else {
-                letter.style.display = "block";
-                letter.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
+        const compliments = ["Your endless patience makes me a better person every single day.", "You give the absolute best hugs that make all my worries melt away.", "Your strength and resilience teach me to never give up on my dreams.", "You have the unique power to make our home feel like the safest place in the world.", "Your kindness inspires everyone around you.", "You always know exactly what to say when I need advice or reassurance."];
+        function generateCompliment() { const display = document.getElementById("complimentText"); display.textContent = compliments[Math.floor(Math.random() * compliments.length)]; }
+        function toggleLetter() { const letter = document.getElementById("secretLetter"); const isOpen = letter.style.display === "block"; letter.style.display = isOpen ? "none" : "block"; if (!isOpen) letter.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
         const canvas = document.getElementById("heartCanvas");
         const ctx = canvas.getContext("2d");
-
         let hearts = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener("resize", resizeCanvas);
-        resizeCanvas();
-
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener("resize", resizeCanvas); resizeCanvas();
         class Heart {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height - canvas.height;
-                this.size = Math.random() * 6 + 4;
-                this.speed = Math.random() * 1.2 + 0.4;
-                this.opacity = Math.random() * 0.4 + 0.2;
-            }
-
-            draw() {
-                ctx.save();
-                ctx.globalAlpha = this.opacity;
-                ctx.fillStyle = "#ff6b81";
-                ctx.beginPath();
-                ctx.moveTo(this.x, this.y);
-                ctx.bezierCurveTo(this.x - this.size / 2, this.y - this.size / 2, this.x - this.size, this.y + this.size / 3, this.x, this.y + this.size);
-            }
-
-            update() {
-                this.y += this.speed;
-                if (this.y > canvas.height) {
-                    this.y = -20;
-                    this.x = Math.random() * canvas.width;
-                }
-            }
+            constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height - canvas.height; this.size = Math.random() * 6 + 4; this.speed = Math.random() * 1.2 + 0.4; this.opacity = Math.random() * 0.4 + 0.2; }
+            draw() { const s = this.size; ctx.save(); ctx.globalAlpha = this.opacity; ctx.fillStyle = "#ff6b81"; ctx.beginPath(); ctx.moveTo(this.x, this.y + s * 0.3); ctx.bezierCurveTo(this.x - s * 0.8, this.y - s * 0.3, this.x - s * 0.6, this.y - s, this.x, this.y - s * 0.35); ctx.bezierCurveTo(this.x + s * 0.6, this.y - s, this.x + s * 0.8, this.y - s * 0.3, this.x, this.y + s * 0.3); ctx.closePath(); ctx.fill(); ctx.restore(); }
+            update() { this.y += this.speed; if (this.y > canvas.height + 20) { this.y = -20; this.x = Math.random() * canvas.width; } }
         }
-
-        function initHearts() {
-            for (let i = 0; i < 25; i++) {
-                hearts.push(new Heart());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            hearts.forEach(heart => {
-                heart.update();
-                heart.draw();
-            });
-            requestAnimationFrame(animate);
-        }
-
-        initHearts();
-        animate();
+        function initHearts() { hearts = []; for (let i = 0; i < 25; i++) hearts.push(new Heart()); }
+        function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); hearts.forEach(heart => { heart.update(); heart.draw(); }); requestAnimationFrame(animate); }
+        initHearts(); animate();
     </script>
 </body>
 </html>
